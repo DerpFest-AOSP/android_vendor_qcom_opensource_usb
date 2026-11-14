@@ -524,8 +524,8 @@ Status UsbGadget::setupFunctions(int64_t functions,
     }
   }
 
-  if (functions &
-      (GadgetFunction::ADB | GadgetFunction::MTP | GadgetFunction::PTP)) {
+  if (functions & (GadgetFunction::ADB | GadgetFunction::MTP |
+                   GadgetFunction::PTP | GadgetFunction::NCM)) {
     if (symlink(CONFIG_PATH, OS_DESC_PATH)) {
       ALOGE("Cannot create symlink %s -> %s errno:%d", CONFIG_PATH,
             OS_DESC_PATH, errno);

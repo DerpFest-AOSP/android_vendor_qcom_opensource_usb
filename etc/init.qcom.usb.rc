@@ -806,6 +806,7 @@ on property:sys.usb.config=ncm && property:sys.usb.configfs=1
     rm /config/usb_gadget/g1/configs/b.1/f7
     rm /config/usb_gadget/g1/configs/b.1/f8
     rm /config/usb_gadget/g1/configs/b.1/f9
+    symlink /config/usb_gadget/g1/configs/b.1 /config/usb_gadget/g1/os_desc/b.1
     write /config/usb_gadget/g1/idVendor 0x05C6
     write /config/usb_gadget/g1/idProduct 0xA4A1
     symlink /config/usb_gadget/g1/functions/ncm.gs6 /config/usb_gadget/g1/configs/b.1/f1
